@@ -2,6 +2,9 @@
 import Header from "./components/Header";
 import FooterOfCustomer from "./components/FooterCustomer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Pricing from "./pages/Pricing";
+
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shirt, Scissors, Sparkles, Shoe, Star } from "lucide-react";
+import { Shirt, Scissors, Sparkles, Package, Star } from "lucide-react";
 import PricingCard from "../components/PricingCard";
 
 export default function Pricing() {
@@ -29,7 +29,7 @@ export default function Pricing() {
     },
     {
       title: "Shoe Cleaning",
-      icon: Shoe,
+      icon: Package,
       price: "R120 / pair",
       description: "Premium sneaker & leather shoe cleaning",
       features: [

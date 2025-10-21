@@ -26,8 +26,8 @@ export default function Booking() {
         </motion.p>
       </section>
 
-      {/* Booking Form */}
-      <section className="max-w-4xl mx-auto bg-white mt-16 mb-20 p-10 rounded-2xl shadow-md">
+      {/* Booking Form with Gradient */}
+      <section className="max-w-4xl mx-auto mt-16 mb-20 p-10 rounded-2xl shadow-xl bg-gradient-to-r from-red-200 via-pink-200 to-red-100">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -45,7 +45,7 @@ export default function Booking() {
               <input
                 type="text"
                 placeholder="Enter your full name"
-                className="input input-bordered w-full rounded-lg"
+                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
                 required
               />
             </div>
@@ -54,7 +54,7 @@ export default function Booking() {
               <input
                 type="tel"
                 placeholder="Enter your contact number"
-                className="input input-bordered w-full rounded-lg"
+                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
                 required
               />
             </div>
@@ -67,7 +67,7 @@ export default function Booking() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="input input-bordered w-full rounded-lg"
+                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ export default function Booking() {
               <label className="block text-gray-700 font-medium mb-2">Preferred Date</label>
               <input
                 type="date"
-                className="input input-bordered w-full rounded-lg"
+                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
                 required
               />
             </div>
@@ -83,13 +83,9 @@ export default function Booking() {
 
           {/* Service Type */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Select Service
-            </label>
-            <select className="select select-bordered w-full rounded-lg" required>
-              <option disabled selected>
-                Choose a service
-              </option>
+            <label className="block text-gray-700 font-medium mb-2">Select Service</label>
+            <select className="select select-bordered w-full rounded-lg bg-white text-gray-900" required>
+              <option disabled selected>Choose a service</option>
               <option>Laundry - Wash & Fold</option>
               <option>Laundry - Iron Only</option>
               <option>Shoe Repair - Sole Replacement</option>
@@ -99,16 +95,14 @@ export default function Booking() {
 
           {/* Pickup or Drop-off */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              Service Type
-            </label>
+            <label className="block text-gray-700 font-medium mb-2">Service Type</label>
             <div className="flex flex-wrap gap-6">
               <label className="flex items-center space-x-2">
-                <input type="radio" name="serviceType" className="radio" required />
+                <input type="radio" name="serviceType" className="radio checked:bg-red-600" required />
                 <span>Pickup</span>
               </label>
               <label className="flex items-center space-x-2">
-                <input type="radio" name="serviceType" className="radio" />
+                <input type="radio" name="serviceType" className="radio checked:bg-red-600" />
                 <span>Drop-off</span>
               </label>
             </div>
@@ -120,7 +114,7 @@ export default function Booking() {
             <textarea
               rows="3"
               placeholder="Enter your pickup/drop-off address"
-              className="textarea textarea-bordered w-full rounded-lg"
+              className="textarea textarea-bordered w-full rounded-lg bg-white text-gray-900"
               required
             ></textarea>
           </div>
@@ -128,7 +122,7 @@ export default function Booking() {
           {/* Submit */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="btn bg-red-600 text-white border-none hover:bg-red-700 w-full mt-4"
+            className="btn bg-red-600 text-white border-none w-full mt-4 hover:bg-red-700"
           >
             Confirm Booking
           </motion.button>

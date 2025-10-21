@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Shirt, Scissors, Sparkles, Package, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import PricingCard from "../components/PricingCard";
 
 export default function Pricing() {
+  const navigate = useNavigate(); // React Router hook for navigation
+
   const pricingData = [
     {
       title: "Standard Laundry",
@@ -94,7 +97,16 @@ export default function Pricing() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {pricingData.map((item, i) => (
-            <PricingCard key={i} {...item} />
+            <PricingCard key={i} {...item}>
+              {/* Book Now button inside PricingCard */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="btn bg-red-600 text-white border-none mt-4 w-full"
+                onClick={() => navigate("/booking")} // Redirect to Booking page
+              >
+                Book Now
+              </motion.button>
+            </PricingCard>
           ))}
         </motion.div>
       </section>
@@ -110,8 +122,9 @@ export default function Pricing() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           className="btn bg-red-600 border-none hover:bg-red-700"
+          onClick={() => navigate("/booking")}
         >
-          Contact Us for a Quote
+          Book Now
         </motion.button>
       </section>
     </div>

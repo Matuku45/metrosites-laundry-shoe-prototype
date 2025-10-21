@@ -5,13 +5,14 @@ import { Menu, X, Phone, Mail } from "lucide-react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Booking", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Contact", href: "#" }
-  ];
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Booking", href: "/booking" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact", href: "/contact" }
+];
+
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 animate-fade-in">

@@ -1,5 +1,7 @@
-import React from "react";
+
 import Header from "./components/Header";
+import FooterOfCustomer from "./components/FooterCustomer";
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
           Quality Service, Quick Turnaround, Happy Customers
         </p>
       </main>
+ <FooterOfCustomer />
     </div>
   );
 }

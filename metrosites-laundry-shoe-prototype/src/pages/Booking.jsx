@@ -4,9 +4,9 @@ import { CalendarDays, CheckCircle, Clock, Star } from "lucide-react";
 
 export default function Booking() {
   return (
-    <div className="bg-gray-50 min-h-screen text-gray-800">
+    <div className="bg-[#1A1F2E] min-h-screen text-[#E0E0E0]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-20 text-center px-6">
+      <section className="bg-gradient-to-r from-[#2C2F33] to-[#1A1F2E] text-[#89CFF0] py-20 text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,20 +19,20 @@ export default function Booking() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-lg max-w-2xl mx-auto"
+          className="text-lg max-w-2xl mx-auto text-[#B0E0FF]"
         >
           Fast, easy, and reliable service. Schedule your pickup or drop-off and
           let us handle the rest.
         </motion.p>
       </section>
 
-      {/* Booking Form with Gradient */}
-      <section className="max-w-4xl mx-auto mt-16 mb-20 p-10 rounded-2xl shadow-xl bg-gradient-to-r from-red-200 via-pink-200 to-red-100">
+      {/* Booking Form */}
+      <section className="max-w-4xl mx-auto mt-16 mb-20 p-10 rounded-2xl shadow-xl bg-[#2C2F33]">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8 text-gray-800"
+          className="text-3xl font-bold text-center mb-8 text-[#89CFF0]"
         >
           Booking Form
         </motion.h2>
@@ -41,20 +41,20 @@ export default function Booking() {
           {/* Name and Contact */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-gray-700 font-medium mb-2">Full Name</label>
+              <label className="block text-[#B0E0FF] font-medium mb-2">Full Name</label>
               <input
                 type="text"
                 placeholder="Enter your full name"
-                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
+                className="input input-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]"
                 required
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
+              <label className="block text-[#B0E0FF] font-medium mb-2">Phone Number</label>
               <input
                 type="tel"
                 placeholder="Enter your contact number"
-                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
+                className="input input-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]"
                 required
               />
             </div>
@@ -63,19 +63,19 @@ export default function Booking() {
           {/* Email and Date */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-gray-700 font-medium mb-2">Email</label>
+              <label className="block text-[#B0E0FF] font-medium mb-2">Email</label>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
+                className="input input-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]"
                 required
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-medium mb-2">Preferred Date</label>
+              <label className="block text-[#B0E0FF] font-medium mb-2">Preferred Date</label>
               <input
                 type="date"
-                className="input input-bordered w-full rounded-lg bg-white text-gray-900"
+                className="input input-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]"
                 required
               />
             </div>
@@ -83,8 +83,8 @@ export default function Booking() {
 
           {/* Service Type */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Select Service</label>
-            <select className="select select-bordered w-full rounded-lg bg-white text-gray-900" required>
+            <label className="block text-[#B0E0FF] font-medium mb-2">Select Service</label>
+            <select className="select select-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]" required>
               <option disabled selected>Choose a service</option>
               <option>Laundry - Wash & Fold</option>
               <option>Laundry - Iron Only</option>
@@ -95,14 +95,14 @@ export default function Booking() {
 
           {/* Pickup or Drop-off */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Service Type</label>
+            <label className="block text-[#B0E0FF] font-medium mb-2">Service Type</label>
             <div className="flex flex-wrap gap-6">
               <label className="flex items-center space-x-2">
-                <input type="radio" name="serviceType" className="radio checked:bg-red-600" required />
+                <input type="radio" name="serviceType" className="radio checked:bg-[#89CFF0]" required />
                 <span>Pickup</span>
               </label>
               <label className="flex items-center space-x-2">
-                <input type="radio" name="serviceType" className="radio checked:bg-red-600" />
+                <input type="radio" name="serviceType" className="radio checked:bg-[#89CFF0]" />
                 <span>Drop-off</span>
               </label>
             </div>
@@ -110,11 +110,11 @@ export default function Booking() {
 
           {/* Address */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Address</label>
+            <label className="block text-[#B0E0FF] font-medium mb-2">Address</label>
             <textarea
               rows="3"
               placeholder="Enter your pickup/drop-off address"
-              className="textarea textarea-bordered w-full rounded-lg bg-white text-gray-900"
+              className="textarea textarea-bordered w-full rounded-lg bg-[#1A1F2E] text-[#E0E0E0] border-[#89CFF0] focus:border-[#89CFF0]"
               required
             ></textarea>
           </div>
@@ -122,7 +122,7 @@ export default function Booking() {
           {/* Submit */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="btn bg-red-600 text-white border-none w-full mt-4 hover:bg-red-700"
+            className="btn bg-[#89CFF0] text-[#1A1F2E] border-none w-full mt-4 hover:bg-[#6fbbe8]"
           >
             Confirm Booking
           </motion.button>
@@ -130,13 +130,13 @@ export default function Booking() {
       </section>
 
       {/* Why Book With Us Section */}
-      <section className="bg-gray-100 py-16 px-6">
+      <section className="bg-[#2C2F33] py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h3
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold mb-10"
+            className="text-3xl font-bold mb-10 text-[#89CFF0]"
           >
             Why Book With MetroSites Laundry & Shoe Repair?
           </motion.h3>
@@ -151,13 +151,13 @@ export default function Booking() {
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl flex flex-col items-center text-center space-y-3"
+                className="bg-[#1A1F2E] p-6 rounded-2xl shadow-md hover:shadow-xl flex flex-col items-center text-center space-y-3"
               >
-                <div className="bg-red-100 text-red-600 w-14 h-14 flex items-center justify-center rounded-full">
+                <div className="bg-[#89CFF0] text-[#1A1F2E] w-14 h-14 flex items-center justify-center rounded-full">
                   <item.icon className="w-7 h-7" />
                 </div>
-                <h4 className="text-lg font-semibold">{item.title}</h4>
-                <p className="text-gray-500 text-sm">{item.text}</p>
+                <h4 className="text-lg font-semibold text-[#B0E0FF]">{item.title}</h4>
+                <p className="text-[#E0E0E0] text-sm">{item.text}</p>
               </motion.div>
             ))}
           </div>

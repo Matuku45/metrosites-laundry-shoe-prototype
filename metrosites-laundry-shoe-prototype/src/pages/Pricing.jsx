@@ -16,13 +16,13 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-800 min-h-screen">
+    <div className="bg-blue-50 text-gray-800 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-500 to-pink-400 text-white text-center py-20">
-        <motion.h1 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-5xl font-extrabold mb-4">
+      <section className="bg-gradient-to-r from-blue-400 to-blue-300 text-white text-center py-20">
+        <motion.h1 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-5xl font-extrabold mb-4 text-midnight">
           Affordable & Transparent Pricing
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg max-w-3xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="text-lg max-w-3xl mx-auto text-midnight/90">
           Honest pricing — no hidden fees, just quality service and clean results you can trust.
         </motion.p>
       </section>
@@ -32,7 +32,7 @@ export default function Pricing() {
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {pricingData.map((item, i) => (
             <PricingCard key={i} {...item}>
-              <motion.button whileHover={{ scale: 1.05 }} className="btn bg-red-500 text-white border-none mt-4 w-full hover:bg-red-600" onClick={() => navigate("/booking")}>
+              <motion.button whileHover={{ scale: 1.05 }} className="btn bg-blue-500 text-white border-none mt-4 w-full hover:bg-blue-600" onClick={() => navigate("/booking")}>
                 Book Now
               </motion.button>
             </PricingCard>
@@ -41,10 +41,10 @@ export default function Pricing() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gray-100 text-gray-800 text-center py-16">
+      <section className="bg-midnight/10 text-midnight text-center py-16">
         <h2 className="text-3xl font-bold mb-4">Need a Custom Quote or Bulk Order?</h2>
-        <p className="text-gray-600 mb-6">We offer discounts for regular customers, hotels, and institutions.</p>
-        <motion.button whileHover={{ scale: 1.05 }} className="btn bg-red-500 text-white border-none hover:bg-red-600" onClick={() => navigate("/booking")}>
+        <p className="text-midnight/80 mb-6">We offer discounts for regular customers, hotels, and institutions.</p>
+        <motion.button whileHover={{ scale: 1.05 }} className="btn bg-blue-500 text-white border-none hover:bg-blue-600" onClick={() => navigate("/booking")}>
           Book Now
         </motion.button>
       </section>
